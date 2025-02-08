@@ -1,15 +1,6 @@
 pipeline {
     agent { label 'agent-anant1' }  // Use the specific agent label
 
-    tools {
-        // Check if this is a Linux agent
-        if (isUnix()) {
-            git '/usr/bin/git'  // Path for Git on Linux agents
-        } else {
-            git 'C:/Program Files/Git/bin/git.exe'  // Path for Git on Windows agents
-        }
-    }
-
     stages {
         stage('Checkout') {
             steps {
@@ -50,4 +41,3 @@ pipeline {
         }
     }
 }
-
