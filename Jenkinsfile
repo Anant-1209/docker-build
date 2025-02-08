@@ -2,7 +2,7 @@ pipeline {
     agent { label 'agent-anant1' }  // Specify the agent label for Windows machine
 
     tools {
-        git 'default'  // Reference the Git tool configured in Global Tool Configuration
+        git 'Default'  // Reference the Git tool configured in Global Tool Configuration
     }
 
     stages {
