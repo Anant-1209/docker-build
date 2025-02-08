@@ -1,10 +1,14 @@
 pipeline {
-    agent { label 'agent-anant1' }  // Use the specific agent label
+    agent { label 'agent-anant1' }  // Specify the agent label for Windows machine
+
+    tools {
+        git 'Git'  // Reference the Git tool configured in Global Tool Configuration
+    }
 
     stages {
         stage('Checkout') {
             steps {
-                checkout scm  // Checkout your repository
+                checkout scm  // Checkout your repository using Git
             }
         }
 
