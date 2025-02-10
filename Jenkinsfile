@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-               echo "hello anant" // Checkout your repository using Git
+               sh "git --version" // Checkout your repository using Git
             }
             
         }
